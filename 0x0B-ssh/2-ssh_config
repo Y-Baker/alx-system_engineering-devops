@@ -1,0 +1,7 @@
+# add config instructure
+
+Host *
+  HostName 54.237.3.221
+  User ubuntu
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
