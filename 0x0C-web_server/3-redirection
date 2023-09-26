@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Configure your Nginx server so that /redirect_me is redirecting to
+# another page with 301 Moved Permanently
+
+mkdir /etc/nginx/html
+touch /etc/nginx/html/index.html
+echo 'Hello Word!' > /etc/nginx/html/index.html
+
+CONFIGRATION=\
+"server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    root /etc/nginx/html;
+    index index.html index.htm index.nginx-debian.html ;
+    location /redirect_me {
+        return 301 https://github.com/Y-Baker;
+    }
+}"
+bash -c "echo -e '$CONFIGRATION' > /etc/nginx/sites-available/default"
+
+if [ "$(pgrep -c nginx)" -le 0 ]; then
+	service nginx start
+else
+	service nginx restart
+fi
