@@ -2,7 +2,10 @@
 # Configure your Nginx server so that /redirect_me is redirecting to
 # another page with 301 Moved Permanently
 
-mkdir /etc/nginx/html
+apt-get update -y
+apt-get install nginx -y
+
+mkdir -p /etc/nginx/html
 touch /etc/nginx/html/index.html
 echo 'Hello Word!' > /etc/nginx/html/index.html
 
