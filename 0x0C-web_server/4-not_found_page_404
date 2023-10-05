@@ -4,10 +4,11 @@
 
 apt-get update -y
 apt-get install nginx -y
+ufw allow 'Nginx HTTP'
 
 mkdir -p /etc/nginx/html
 touch /etc/nginx/html/index.html
-echo 'Hello Word!' > /etc/nginx/html/index.html
+echo 'Hello World!' > /etc/nginx/html/index.html
 
 touch /etc/nginx/html/error_404.html
 echo "Ceci n'est pas une page" > /etc/nginx/html/error_404.html
