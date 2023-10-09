@@ -2,6 +2,11 @@
 
 <br />
 
+### Resourses
+- [SSH Certification Set-up](https://gbeminiyi.hashnode.dev/installing-certbot-in-your-haproxy-load-balancer-server)
+
+<br />
+
 ## Authors :black_nib:
 
 * __Yousef Bakier__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
