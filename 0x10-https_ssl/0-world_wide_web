@@ -11,7 +11,7 @@ display_subdomains() {
     echo "$result"
 }
 
-if [$# -eq 2]; then
+if [ $# -eq 2 ]; then
     display_subdomains $1 $2
 else
     subdomains=("www" "lb-01" "web-01" "web-02")
