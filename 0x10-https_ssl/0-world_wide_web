@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# display information about subdomains of a domain
+
+display_subdomains() {
+    local domain="$1"
+    local subdomain="$2"
+
+    ip="$subdomain.$domain"
+
+    result=$(dig "$ip" | grep 'ANSWER SECTION:' -A1 | sed -n 2p | awk '{print "The subdomain '$subdomain' is a "$4" record and points to " $5}')
+    echo "$result"
+}
+
+if [$# -eq 2]; then
+    display_subdomains $1 $2
+else
+    subdomains=("www" "lb-01" "web-01" "web-02")
+
+    for subdomain in "${subdomains[@]}"; do
+        display_subdomains $1 $subdomain
+    done
+fi
