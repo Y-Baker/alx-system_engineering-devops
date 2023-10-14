@@ -3,8 +3,8 @@
 <br />
 
 ### My Article
-- [LinkedIn](link)
-- [Medium](link)
+- [LinkedIn](https://www.linkedin.com/pulse/what-happens-when-you-type-googlecom-your-browser-youssef-bakier/)
+- [Medium](https://medium.com/p/cb54f74131d5)
 <br />
 
 ## Authors :black_nib:
