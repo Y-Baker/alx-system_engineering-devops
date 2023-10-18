@@ -1,10 +1,12 @@
 # 0x14-mysql
 
 <br />
-### Resourses
+
+## Resourses
 - [installation](./Install_MySQL.pdf)
 
 <br />
+
 ## Authors :black_nib:
 
 * __Yousef Bakier__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
