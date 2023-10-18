@@ -3,7 +3,8 @@
 <br />
 
 ## Resourses
-- [installation](./Install_MySQL.pdf)
+- [Installation](./Install_MySQL.pdf)
+- [Set-up](https://shazaali.substack.com/p/database-administration)
 
 <br />
 
