@@ -1,5 +1,10 @@
-0x01-shell_permissions
+# 0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter
 
+<br />
+
+### My Article
+- [LinkedIn](https://www.linkedin.com/pulse/what-happens-when-you-type-googlecom-your-browser-youssef-bakier/)
+- [Medium](https://medium.com/p/cb54f74131d5)
 <br />
 
 ## Authors :black_nib:

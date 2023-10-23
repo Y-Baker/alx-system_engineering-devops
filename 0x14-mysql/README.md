@@ -1,4 +1,10 @@
-0x01-shell_permissions
+# 0x14-mysql
+
+<br />
+
+## Resourses
+- [Installation](./Install_MySQL.pdf)
+- [Set-up](https://shazaali.substack.com/p/database-administration)
 
 <br />
 

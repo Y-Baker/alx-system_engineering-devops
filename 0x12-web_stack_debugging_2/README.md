@@ -1,9 +1,12 @@
-# 0x10. HTTPS SSL
+# 0x12. Web stack debugging #2
 
 <br />
 
-### Resourses
-- [SSH Certification Set-up](https://gbeminiyi.hashnode.dev/installing-certbot-in-your-haproxy-load-balancer-server)
+| Task | File |
+| ---- | ---- |
+| 0. Run software as another user | [0-iamsomeoneelse](./0-iamsomeoneelse) |
+| 1. Run Nginx as Nginx | [1-run_nginx_as_nginx](./1-run_nginx_as_nginx) |
+| 2. 7 lines or less | [100-fix_in_7_lines_or_less](./100-fix_in_7_lines_or_less)|
 
 <br />
 
