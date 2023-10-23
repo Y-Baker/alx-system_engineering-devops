@@ -9,9 +9,9 @@
 - [What are microservices](https://smartbear.com/solutions/microservices/)
 - [PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry](https://www.python.org/dev/peps/pep-0008/)
 
-## Tasks
+<br/>
 
-<details>
-<summary><a href="./0-gather_data_from_an_API.py">0. Gather data from an API</a></summary><br>
-<a href='https://postimg.cc/N5NpbXMC' target='_blank'><img src='https://i.postimg.cc/8zG9pBVG/image.png' border='0' alt='image'/></a>
-</details>
+## Authors :black_nib:
+
+* __Yousef Bakier__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+ &nbsp;&nbsp;[<img height="" src="https://img.shields.io/static/v1?label=&message=GitHub&color=181717&logo=GitHub&logoColor=f2f2f2&labelColor=2F333A" alt="Github">](https://github.com/Y-Baker)
