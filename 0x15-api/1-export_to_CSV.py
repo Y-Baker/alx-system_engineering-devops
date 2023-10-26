@@ -1,18 +1,24 @@
 #!/usr/bin/python3
-"""exports to-do list data in CSV format for a specified employee ID."""
-import csv
+"""New Module for REST API Task"""
+
 import requests
-import sys
+import csv
+from sys import argv
 
-if __name__ == "__main__":
-    user_id = sys.argv[1]
-    url = "https://jsonplaceholder.typicode.com/"
-    client = requests.get(url + "users/{}".format(user_id)).json()
-    username = client.get("username")
-    todos = requests.get(url + "todos", params={"userId": user_id}).json()
+URL = "https://jsonplaceholder.typicode.com"
 
-    with open("{}.csv".format(user_id), "w", newline="") as csvfile:
-        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        [writer.writerow(
-            [user_id, username, t.get("completed"), t.get("title")]
-         ) for t in todos]
+if __name__ == '__main__':
+    if len(argv) > 1:
+        id = int(argv[1])
+        url_user = f"{URL}/users/{id}"
+        emp_name = requests.get(url=url_user).json().get('name')
+        tasks_resp = requests.get(f"{URL}/todos/").json()
+        tasks = list(filter(lambda _: _.get('userId') == id, tasks_resp))
+        # tasks_complete = list(filter(lambda _: _.get('completed'), tasks))
+
+    with open(f'{id}.csv', 'w', newline="") as f:
+        writer = csv.writer(f, delimiter=',', quoting=csv.QUOTE_ALL)
+        for task in tasks:
+            writer.writerow([id, emp_name,
+                             task.get('completed'),
+                             task.get('title')])
