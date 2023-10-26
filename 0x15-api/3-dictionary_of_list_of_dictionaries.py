@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""exports every employee's to-do list data in JSON format."""
+"""New Module for REST API Task"""
+
 import json
 import requests
+from sys import argv
 
-if __name__ == "__main__":
-    url = "https://jsonplaceholder.typicode.com/"
-    users = requests.get(url + "users").json()
+URL = "https://jsonplaceholder.typicode.com"
 
-    with open("todo_all_employees.json", "w") as jsonfile:
-        json.dump({
-            u.get("id"): [{
-                "task": t.get("title"),
-                "completed": t.get("completed"),
-                "username": u.get("username")
-            } for t in requests.get(url + "todos",
-                                    params={"userId": u.get("id")}).json()]
-            for u in users}, jsonfile)
+if __name__ == '__main__':
+    users = requests.get(f"{URL}/users/").json()
+    with open('todo_all_employees.json', 'w', newline='') as f:
+        data = {user.get('id'): [{"username": user.get('username'),
+                                  "task": task.get('title'),
+                                  "completed": task.get('completed')}
+                                 for task in requests.get
+                                 (f'{URL}/todos',
+                                  params={"userId": user.get('id')}).json()]
+                for user in users}
+        json.dump(data, f)
