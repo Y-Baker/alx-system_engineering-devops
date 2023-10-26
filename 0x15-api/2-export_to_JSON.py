@@ -14,7 +14,6 @@ if __name__ == '__main__':
         emp_name = requests.get(url=url_user).json().get('username')
         tasks_resp = requests.get(f"{URL}/todos/").json()
         tasks = list(filter(lambda _: _.get('userId') == id, tasks_resp))
-        # tasks_complete = list(filter(lambda _: _.get('completed'), tasks))
 
         with open(f'{id}.json', "w", newline='') as f:
             data = {id: [{"task": task.get('title'),
