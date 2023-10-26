@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """New Module for REST API Task"""
 
-import requests
 import csv
+import requests
 from sys import argv
 
 URL = "https://jsonplaceholder.typicode.com"
