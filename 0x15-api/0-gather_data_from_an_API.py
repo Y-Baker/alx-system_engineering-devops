@@ -15,8 +15,8 @@ if __name__ == '__main__':
         tasks = list(filter(lambda _: _.get('userId') == id, tasks_resp))
         tasks_complete = list(filter(lambda _: _.get('completed'), tasks))
 
-        print(f"Employee {emp_name} is done with task\
- ({len(tasks_complete)}/{len(tasks)}):")
+        print(f"Employee {emp_name} is done with tasks\
+({len(tasks_complete)}/{len(tasks)}):")
 
         for task in tasks_complete:
             print(f"\t {task.get('title')}")
