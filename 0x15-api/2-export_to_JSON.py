@@ -1,19 +1,26 @@
 #!/usr/bin/python3
-"""exports to-do list data in JSON format for a specified employee ID."""
+"""New Module for REST API Task"""
+
 import json
 import requests
-import sys
+from sys import argv
 
-if __name__ == "__main__":
-    user_id = sys.argv[1]
-    url = "https://jsonplaceholder.typicode.com/"
-    client = requests.get(url + "users/{}".format(user_id)).json()
-    username = client.get("username")
-    todos = requests.get(url + "todos", params={"userId": user_id}).json()
+URL = "https://jsonplaceholder.typicode.com"
 
-    with open("{}.json".format(user_id), "w") as jsonfile:
-        json.dump({user_id: [{
-                "task": t.get("title"),
-                "completed": t.get("completed"),
-                "username": username
-            } for t in todos]}, jsonfile)
+if __name__ == '__main__':
+    if len(argv) > 1:
+        id = int(argv[1])
+        url_user = f"{URL}/users/{id}"
+        emp_name = requests.get(url=url_user).json().get('username')
+        tasks_resp = requests.get(f"{URL}/todos/").json()
+        tasks = list(filter(lambda _: _.get('userId') == id, tasks_resp))
+        # tasks_complete = list(filter(lambda _: _.get('completed'), tasks))
+
+        with open(f'{id}.json', "w", newline='') as f:
+            data = {id: [{"task": task.get('title'),
+                          "completed": task.get('completed'),
+                          "username": emp_name,} for task in tasks
+                          ]}
+            print(type(data))
+            print(data)
+            json.dump(data, f)
