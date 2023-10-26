@@ -19,8 +19,7 @@ if __name__ == '__main__':
         with open(f'{id}.json', "w", newline='') as f:
             data = {id: [{"task": task.get('title'),
                           "completed": task.get('completed'),
-                          "username": emp_name,} for task in tasks
-                          ]}
+                          "username": emp_name} for task in tasks]}
             print(type(data))
             print(data)
             json.dump(data, f)
