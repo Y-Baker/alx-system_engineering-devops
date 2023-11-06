@@ -1,15 +1,16 @@
-Incident Report: Electricity Outage During Software Installation
+# Incident Report: Electricity Outage During Software Installation
+<br>
 
-Incident Summary:
+## Incident Summary:
 On 0x14. MySQL, an incident occurred during the installation of critical software (mysql) on my Linux servers due to a sudden electricity outage. This incident report outlines the details of the event, its impact, the immediate actions taken, root causes, and recommendations for preventing future occurrences.
 
-Incident Details:
+## Incident Details:
 Date and Time of Incident: 17/10/2023 - 20:00
 Software Being Installed: MySQL
 Incident Severity: [Low]
 Incident Impact: The Installation Fail and the system was filled with broken files
 
-Timeline:
+## Timeline:
 * 20:00 - Electricity cut off while I was installing the software by ssh connection with the server.
 * 21:00 - Electricity is back on and I try to connect to the server by ssh connection.
 * 21:10 - The Installation is failed and broken files still there.
@@ -17,13 +18,13 @@ Timeline:
 * 21:30 - all broken files have deleted from the system and I can install the software again.
 * 21:40 - the Softeare installed correctly and I can continue my work saftly.
 
-Immediate Actions Taken:
+## Immediate Actions Taken:
 1. Upon detection of the electricity outage, the incident response team was immediately alerted.
 2. The server was powered off safely to prevent potential data corruption.
 3. The UPS (Uninterruptible Power Supply) logs were reviewed to understand the extent of the power outage.
 4. Once power was restored, the server was rebooted, and a filesystem check (fsck) was initiated to ensure the integrity of the filesystem.
 
-Root Causes:
+## Root Causes:
 After a thorough investigation, the root causes of the incident were identified as follows:
 
 1. Inadequate Power Backup: The server was not connected to a reliable UPS with a sufficient battery backup, and the electricity outage exceeded the server's uptime.
@@ -48,12 +49,25 @@ To prevent similar incidents in the future, we propose the following actions:
 4. Regular Maintenance:
    - Schedule regular maintenance and inspections of power infrastructure to identify and address potential issues proactively.
 
-Conclusion:
+## Conclusion:
 The incident report provides an overview of the electricity outage incident during software installation on my Linux server. By implementing the recommended actions, we aim to enhance the reliability and resilience of my server infrastructure to mitigate the impact of similar incidents in the future.
 
 This incident report is subject to review, and any additional findings or corrective actions will be documented accordingly.
 
-[Yousef Ahmed]
+<br>
+
+[Yousef Ahmed] 
+
 [Software Enginnering]
+
 [alx-system_engineering-devops]
+
 [6/11/2023]
+
+---
+
+## Authors :black_nib:
+
+* __Yousef Bakier__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+ &nbsp;&nbsp;[<img height="" src="https://img.shields.io/static/v1?label=&message=GitHub&color=181717&logo=GitHub&logoColor=f2f2f2&labelColor=2F333A" alt="Github">](https://github.com/Y-Baker)
+
