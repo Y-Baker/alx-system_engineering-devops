@@ -16,6 +16,6 @@ def number_of_subscribers(subreddit):
 
     if (res.status_code / 100) >= 4:
         return 0
-    
+
     num = res.json().get('data').get('subscribers')
     return int(num)
