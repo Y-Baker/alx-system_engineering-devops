@@ -19,6 +19,7 @@ def top_ten(subreddit):
 
     if (res.status_code / 100) >= 4:
         print('None')
+        return
 
     posts = res.json().get('data').get('children')
     for post in posts:
