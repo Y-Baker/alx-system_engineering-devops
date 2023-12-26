@@ -1,5 +1,7 @@
 # 0x0E-web_stack_debugging_1
 
+<br />
+
 ## Authors :black_nib:
 
 * __Yousef Bakier__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
